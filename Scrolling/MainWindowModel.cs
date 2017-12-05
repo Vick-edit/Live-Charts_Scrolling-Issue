@@ -39,7 +39,7 @@ namespace Scrolling
             }
 
             Formatter = x => new DateTime((long) x).ToString("yyyy");
-            From = DateTime.Now.AddHours(10000).Ticks;
+            From = Values.Min(x => x.DateTime).Ticks;
             To = DateTime.Now.AddHours(90000).Ticks;
         }
 
